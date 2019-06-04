@@ -24,11 +24,11 @@ public class PluginUtils {
     }
 
     public static boolean isRedstone(Block m) {
-        return (m.getType() == Material.REDSTONE_ORE || m.getType() == Material.GLOWING_REDSTONE_ORE);
+        return (m.getType() == Material.REDSTONE_ORE );
     }
 
     public static boolean isRedstone(Material m) {
-        return (m == Material.REDSTONE_ORE || m == Material.GLOWING_REDSTONE_ORE);
+        return (m == Material.REDSTONE_ORE || m == Material.REDSTONE_ORE);
     }
 
     public static String customTranslateAlternateColorCodes(char altColorChar, String textToTranslate) {

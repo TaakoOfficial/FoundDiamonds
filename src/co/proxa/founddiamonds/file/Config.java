@@ -45,6 +45,13 @@ public class Config {
     public final static String BungeeCordAdminList = "Found Diamonds Configuration.Main.bungeecord_admins";
 	public final static String BungeeCordServer = "Found Diamonds Configuration.Main.bungeecord_server";
 
+	/* Herochat Support*/
+	
+	public static final String enableHerochat = "Found Diamonds Configuration.Main.use-herochat";
+	public static final String herochatChannel = "Found Diamonds Configuration.Main.herochat-channel";
+	public static final String herochatSender = "Found Diamonds Configuration.Main.herochat-sender";
+	public static final String herochatServerName = "Found Diamonds Configuration.Main.herochat-servername";
+	
     /*Logging*/
     public final static String logTrapBreaks = "Found Diamonds Configuration.Logging.Trap breaks";
     public final static String logLightLevelViolations = "Found Diamonds Configuration.Logging.Light Level Violations";
@@ -66,5 +73,6 @@ public class Config {
 
     /*Metrics*/
     public final static String metrics = "Found Diamonds Configuration.Metrics.Enabled";
+	public final static String debug = "Found Diamonds Configuration.Main.debug";
 
 }

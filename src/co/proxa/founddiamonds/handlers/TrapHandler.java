@@ -1,5 +1,6 @@
 package co.proxa.founddiamonds.handlers;
 
+import org.bukkit.BanList.Type;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -172,10 +173,9 @@ public class TrapHandler {
             case DIRT:
             case GRASS:
             case VINE:
-            case LEAVES:
+            case OAK_LEAVES:
             case DEAD_BUSH:
-            case REDSTONE_TORCH_ON:
-            case REDSTONE_TORCH_OFF:
+            case REDSTONE_TORCH:
             case WATER:
             case LAVA:
                 return false;
@@ -220,7 +220,8 @@ public class TrapHandler {
 				kicked = true;
 			}
 			if (fd.getConfig().getBoolean(Config.banOnTrapBreak)) {
-				player.setBanned(true);
+				Bukkit.getBanList(Type.NAME).addBan(player.getName(), "Triggered FD Trap", null, "FoundDiamonds");
+				//player.setBanned(true);
 				banned = true;
 			}
             if(fd.getConfig().getBoolean(Config.ExecutecommandOnTrapBreak)){

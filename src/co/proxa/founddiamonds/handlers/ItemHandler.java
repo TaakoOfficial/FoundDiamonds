@@ -27,25 +27,25 @@ public class ItemHandler {
     }
 
     private void selectRandomItem(Player player, int randomNumber) {
-        int randomItem;
+        Material randomItem;
         if (randomNumber < 50) {
-            randomItem = fd.getConfig().getInt(Config.randomItem1);
+            randomItem = Material.valueOf(fd.getConfig().getString(Config.randomItem1));
         } else if (randomNumber >= 50 && randomNumber < 100) {
-            randomItem = fd.getConfig().getInt(Config.randomItem2);
+            randomItem = Material.valueOf(fd.getConfig().getString(Config.randomItem2));
         } else {
-            randomItem = fd.getConfig().getInt(Config.randomItem3);
+            randomItem = Material.valueOf(fd.getConfig().getString(Config.randomItem3));
         }
         int amount = getRandomItemAmount();
         giveItems(player, randomItem, amount);
     }
 
     //@SuppressWarnings("deprecation")
-    private void giveItems(Player player, int item, int amount) {
+    private void giveItems(Player player, Material item, int amount) {
         if (fd.getConfig().getBoolean(Config.awardAllItems)) {
             for(Player p: fd.getServer().getOnlinePlayers()) {
                 if (fd.getWorldHandler().isEnabledWorld(p)) {
                     p.sendMessage(ChatColor.GRAY + "Everyone else got " + amount +
-                            " " + Format.getFormattedName(Material.getMaterial(item), amount));
+                            " " + Format.getFormattedName(item, amount));
                     if (p != player) {
                         p.getInventory().addItem(new ItemStack(item, amount));
                         p.updateInventory();
@@ -54,7 +54,7 @@ public class ItemHandler {
             }
         } else {
             player.sendMessage(ChatColor.GRAY + "You got " + amount +
-                    " " + Format.getFormattedName(Material.getMaterial(item), amount));
+                    " " + Format.getFormattedName(item, amount));
             player.getInventory().addItem(new ItemStack(item, amount));
             player.updateInventory();
         }

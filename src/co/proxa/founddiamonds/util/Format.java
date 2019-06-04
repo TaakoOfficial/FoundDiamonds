@@ -18,7 +18,7 @@ public class Format {
 
     public static String getFormattedName(Material mat, int total) {
         String matName;
-        if (mat == Material.GLOWING_REDSTONE_ORE || mat == Material.REDSTONE_ORE) {
+        if ( mat == Material.REDSTONE_ORE) {
             if (total > 1) {
                 matName = "redstone ores";
             } else {
@@ -26,7 +26,7 @@ public class Format {
             }
         } else if (mat == Material.OBSIDIAN) {
             matName = "obsidian";
-        } else if (mat == Material.LONG_GRASS) {
+        } else if (mat == Material.TALL_GRASS) {
             if (total > 1) {
                 matName = "long grasses";
             } else {
@@ -50,7 +50,7 @@ public class Format {
             matName = "chainmail leggings";
         } else if (mat == Material.IRON_LEGGINGS) {
             matName = "iron leggings";
-        } else if (mat == Material.GOLD_LEGGINGS) {
+        } else if (mat == Material.GOLDEN_LEGGINGS) {
             matName = "gold leggings";
         } else if (mat == Material.DIAMOND_LEGGINGS) {
             matName = "diamond leggings";
@@ -66,7 +66,7 @@ public class Format {
             } else {
                 matName = "jukebox";
             }
-        } else if (mat == Material.BED_BLOCK) {
+        } else if (mat == Material.RED_BED) {
             if (total > 1) {
                 matName = "beds";
             } else {
@@ -78,31 +78,31 @@ public class Format {
             } else {
                 matName = "bookshelf";
             }
-        } else if (mat == Material.LEAVES) {
+        } else if (mat == Material.OAK_LEAVES) {
             if (total > 1) {
                 matName = "leaves";
             } else {
                 matName = "leaf";
             }
-        } else if (mat == Material.IRON_DOOR_BLOCK) {
+        } else if (mat == Material.IRON_DOOR) {
             if (total > 1) {
                 matName = "iron doors";
             } else {
                 matName = "iron door";
             }
-        } else if (mat == Material.REDSTONE_TORCH_ON || mat == Material.REDSTONE_TORCH_OFF) {
+        } else if (mat == Material.REDSTONE_TORCH) {
             if (total > 1) {
                 matName = "redstone torches";
             } else {
                 matName = "redstone torch";
             }
-        }  else if (mat == Material.NETHER_WARTS) {
+        }  else if (mat == Material.NETHER_WART) {
             if (total > 1) {
                 matName = "nether warts";
             } else {
                 matName = "nether wart";
             }
-        } else if (mat == Material.WOOD_STAIRS) {
+        } else if (mat == Material.OAK_STAIRS) {
             matName = "wooden stairs";
         } else if (mat == Material.COBBLESTONE_STAIRS) {
             matName = "cobblestone stairs";
@@ -120,35 +120,35 @@ public class Format {
             matName = "netherrack";
         } else if (mat == Material.SOUL_SAND) {
             matName = "soul sand";
-        } else if (mat == Material.COOKED_FISH) {
+        } else if (mat == Material.COOKED_SALMON) {
             matName = "cooked fish";
         } else if (mat == Material.BEDROCK) {
             matName = "bedrock";
-        } else if (mat == Material.SOIL) {
+        } else if (mat == Material.FARMLAND) {
             if (total > 1) {
                 matName = "soil blocks";
             } else {
                 matName = "soil block";
             }
-        } else if (mat == Material.DIODE_BLOCK_OFF || mat == Material.DIODE_BLOCK_ON) {
+        } else if ( mat == Material.REPEATER) {
             if (total > 1) {
                 matName = "repeaters";
             } else {
                 matName = "repeater";
             }
-        } else if (mat == Material.CAKE_BLOCK) {
+        } else if (mat == Material.CAKE) {
             if (total > 1) {
                 matName = "cakes";
             } else {
                 matName = "cake";
             }
-        } else if (mat == Material.THIN_GLASS) {
+        } else if (mat == Material.GLASS_PANE) {
             if (total > 1) {
                 matName = "pieces of thin glass";
             } else {
                 matName = "piece of thin glass";
             }
-        } else if (mat == Material.MELON_BLOCK) {
+        } else if (mat == Material.MELON) {
             if (total > 1) {
                 matName = "melons";
             } else {
@@ -166,25 +166,25 @@ public class Format {
             } else {
                 matName = "grass block";
             }
-        } else if (mat == Material.SUGAR_CANE_BLOCK) {
+        } else if (mat == Material.SUGAR_CANE) {
             if (total > 1) {
                 matName = "sugar canes";
             } else {
                 matName = "sugar cane";
             }
-        } else if (mat == Material.CROPS) {
+        } else if (mat == Material.WHEAT) {
             if (total > 1) {
                 matName = "crops";
             } else {
                 matName = "crop";
             }
-        } else if (mat == Material.RAILS) {
+        } else if (mat == Material.RAIL) {
             if (total > 1) {
                 matName = "rails";
             } else {
                 matName = "rail";
             }
-        } else if (mat == Material.WOOD) {
+        } else if (mat == Material.OAK_WOOD) {
             if (total > 1) {
                 matName = "wooden planks";
             } else {
@@ -196,7 +196,7 @@ public class Format {
             } else {
                 matName = "cactus";
             }
-        } else if (mat == Material.WOOL) {
+        } else if (mat == Material.WHITE_WOOL) {
             matName = "wool";
         } else if (mat == Material.TORCH) {
             if (total > 1) {

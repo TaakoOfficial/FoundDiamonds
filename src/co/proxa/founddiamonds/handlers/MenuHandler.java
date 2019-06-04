@@ -79,9 +79,9 @@ public class MenuHandler {
         sender.sendMessage(ChatColor.RED + "    Odds of casting spells: " + ChatColor.AQUA + fd.getConfig().getInt(Config.chanceToGetPotion) + "%");
         sender.sendMessage(ChatColor.RED + "    Random items for finding diamonds: " + getPrettyMenuBoolean(fd.getConfig().getBoolean(Config.itemsForFindingDiamonds)));
         sender.sendMessage(ChatColor.RED + "    Odds of getting items: " + ChatColor.AQUA + fd.getConfig().getInt(Config.chanceToGetItem) + "%");
-        sender.sendMessage(ChatColor.RED + "    Item 1: " + ChatColor.AQUA + Format.material(Material.getMaterial(fd.getConfig().getInt(Config.randomItem1))));
-        sender.sendMessage(ChatColor.RED + "    Item 2: " + ChatColor.AQUA + Format.material(Material.getMaterial(fd.getConfig().getInt(Config.randomItem2))));
-        sender.sendMessage(ChatColor.RED + "    Item 3: " + ChatColor.AQUA + Format.material(Material.getMaterial(fd.getConfig().getInt(Config.randomItem3))));
+        sender.sendMessage(ChatColor.RED + "    Item 1: " + ChatColor.AQUA + Format.material(Material.getMaterial(fd.getConfig().getString(Config.randomItem1))));
+        sender.sendMessage(ChatColor.RED + "    Item 2: " + ChatColor.AQUA + Format.material(Material.getMaterial(fd.getConfig().getString(Config.randomItem2))));
+        sender.sendMessage(ChatColor.RED + "    Item 3: " + ChatColor.AQUA + Format.material(Material.getMaterial(fd.getConfig().getString(Config.randomItem3))));
         sender.sendMessage(ChatColor.RED + "    LoggingHandler all diamond ore breaks: " + getPrettyMenuBoolean(fd.getConfig().getBoolean(Config.logDiamondBreaks)));
         sender.sendMessage("Type /fd config 2 to read the next page");
     }

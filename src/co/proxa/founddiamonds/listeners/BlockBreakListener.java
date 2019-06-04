@@ -40,7 +40,6 @@ public class BlockBreakListener implements Listener  {
 
         if (fd.getPermissions().hasMonitorPerm(player)) {
         	FoundDiamonds.fd.debug(player.getName() + " has monitor perm");
-        	System.out.println(fd.getMapHandler().getAdminMessageBlocks().keySet());
             if (fd.getMapHandler().getAdminMessageBlocks().containsKey(mat)) {
             	FoundDiamonds.fd.debug("Material is logged");
                 lightLevel = fd.getLightLevelHandler().getLightLevel(event.getBlock());
