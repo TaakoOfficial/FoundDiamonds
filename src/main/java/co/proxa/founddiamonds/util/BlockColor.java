@@ -65,7 +65,6 @@ public class BlockColor {
             case BRICK:
             case BRICK_STAIRS:
             case RED_MUSHROOM:
-            case ROSE_RED:
             case NETHERRACK:
             case TNT:
                 return ChatColor.RED;
