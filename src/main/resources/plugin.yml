@@ -2,6 +2,7 @@ name: FoundDiamonds
 version: 3.6.6
 main: co.proxa.founddiamonds.FoundDiamonds
 author: proxa
+api-version: 1.14
 website: http://dev.bukkit.org/server-mods/founddiamonds/
 description: Block announcer and anti x-ray
 dev-url: http://dev.bukkit.org/server-mods/founddiamonds/

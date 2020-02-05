@@ -2,6 +2,7 @@ package co.proxa.founddiamonds.handlers;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import co.proxa.founddiamonds.FoundDiamonds;
@@ -47,16 +48,15 @@ public class ItemHandler {
                     p.sendMessage(ChatColor.GRAY + "Everyone else got " + amount +
                             " " + Format.getFormattedName(item, amount));
                     if (p != player) {
-                        p.getInventory().addItem(new ItemStack(item, amount));
-                        p.updateInventory();
+                    	p.getWorld().dropItem(player.getLocation(), new ItemStack(item, amount));
+                        
                     }
                 }
             }
         } else {
             player.sendMessage(ChatColor.GRAY + "You got " + amount +
                     " " + Format.getFormattedName(item, amount));
-            player.getInventory().addItem(new ItemStack(item, amount));
-            player.updateInventory();
+            player.getWorld().dropItem(player.getLocation(), new ItemStack(item, amount));
         }
     }
 

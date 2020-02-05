@@ -45,7 +45,7 @@ public class MapHandler {
             List<String> thelist = fd.getConfig().getStringList(configLoc);
             for (String x : thelist) {
             	 String[] sp = x.split(",");
-                Material mat = parseMaterial(Material.valueOf(sp[0]));
+                Material mat = parseMaterial(Material.matchMaterial(sp[0]));
                 if (mat != null && mat.isBlock()) {
                     try {
                         ChatColor color = parseColor(sp[1], mat);
@@ -63,7 +63,7 @@ public class MapHandler {
                     //TODO support for deprecated item format
                     try {
                         String[] s = x.split(":");
-                        Material mat2 = parseMaterial(Material.valueOf(s[0]));
+                        Material mat2 = parseMaterial(Material.matchMaterial(s[0]));
                         if (mat != null && mat.isBlock()) {
                             fd.getLog().warning("Your configuration is outdated and using the old style of separating blocks and colors with a colon here: " + s[0]);
                             fd.getLog().warning("Please update these to be commas as support for the old style will be dropped.");
@@ -148,7 +148,7 @@ public class MapHandler {
         } else if (args.length >= 3) {
             String s = PluginUtils.getArgs2Plus(args);
             String[] sp = s.split(",");
-            Material mat = parseMaterial(Material.valueOf(sp[0]));
+            Material mat = parseMaterial(Material.matchMaterial(sp[0]));
             if (mat != null) {
                 ChatColor c;
                 try {
@@ -180,7 +180,7 @@ public class MapHandler {
             sender.sendMessage(ChatColor.BLUE + "        http://jd.bukkit.org/apidocs/org/bukkit/Material.html");
         } else if (args.length > 2) {
             String s = PluginUtils.getArgs2Plus(args);
-            Material mat = parseMaterial(Material.valueOf(s));
+            Material mat = parseMaterial(Material.matchMaterial(s));
             if (mat != null) {
                 if (map.containsKey(mat)) {
                     sender.sendMessage(Prefix.getChatPrefix() + ChatColor.DARK_RED + " Removed " + map.get(mat) + Format.material(mat));
