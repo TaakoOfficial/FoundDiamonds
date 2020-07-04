@@ -24,9 +24,7 @@ public class Config {
     public final static String itemsForFindingDiamonds = "Found Diamonds Configuration.Awards.Items.Random items for finding diamonds";
     public final static String chanceToGetItem = "Found Diamonds Configuration.Awards.Items.Percent of time items are given";
     public final static String maxItems = "Found Diamonds Configuration.Awards.Items.Maximum number or items to give";
-    public final static String randomItem1 = "Found Diamonds Configuration.Awards.Items.Random Item 1";
-    public final static String randomItem2 = "Found Diamonds Configuration.Awards.Items.Random Item 2";
-    public final static String randomItem3 = "Found Diamonds Configuration.Awards.Items.Random Item 3";
+    public final static String randomItems = "Found Diamonds Configuration.Awards.Items.Random Items";
 
     /*Awards.Spells*/
     public final static String awardAllPotions = "Found Diamonds Configuration.Awards.Spells.Award all players";
@@ -40,17 +38,12 @@ public class Config {
     public final static String bcMessage = "Found Diamonds Configuration.Broadcasts.Options.Message";
     public final static String useNick = "Found Diamonds Configuration.Broadcasts.Options.Use player nicknames";
     public final static String useOreColors = "Found Diamonds Configuration.Broadcasts.Options.Use classic ore colors for ores";
+    public final static String command = "Found Diamonds Configuration.Broadcasts.Options.Command";
     /*BungeeCord support*/
     public final static String useBungeeCord = "Found Diamonds Configuration.Main.bungeecord";
     public final static String BungeeCordAdminList = "Found Diamonds Configuration.Main.bungeecord_admins";
 	public final static String BungeeCordServer = "Found Diamonds Configuration.Main.bungeecord_server";
 
-	/* Herochat Support*/
-	
-	public static final String enableHerochat = "Found Diamonds Configuration.Main.use-herochat";
-	public static final String herochatChannel = "Found Diamonds Configuration.Main.herochat-channel";
-	public static final String herochatSender = "Found Diamonds Configuration.Main.herochat-sender";
-	public static final String herochatServerName = "Found Diamonds Configuration.Main.herochat-servername";
 	
     /*Logging*/
     public final static String logTrapBreaks = "Found Diamonds Configuration.Logging.Trap breaks";

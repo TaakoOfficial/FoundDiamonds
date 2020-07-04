@@ -22,9 +22,8 @@ Found Diamonds Configuration:
       Award all players: true
       Percent of time items are given: 25
       Maximum number or items to give: 3
-      Random Item 1: 265
-      Random Item 2: 263
-      Random Item 3: 340
+      Random Items:
+        - 'COAL_BLOCK'
     Spells:
       Random spells for finding diamonds: false
       Award all players: true
@@ -50,6 +49,7 @@ Found Diamonds Configuration:
       Message: "@Player@ found @Number@ @BlockName@"
       Use player nicknames: true
       Use classic ore colors for ores: true
+      Command:
   Logging:
     Trap breaks: true
     Light Level Violations: false

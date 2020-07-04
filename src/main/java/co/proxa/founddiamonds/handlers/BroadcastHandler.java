@@ -67,6 +67,13 @@ public class BroadcastHandler {
 				System.out.println("[ERROR] Founddiamonds: Bungeecordsupport is enabled but no admins are defined. Can't send infos!");
 			}
 		}
+		if (fd.getConfig().getString(Config.command) != null) {
+			String command = fd.getConfig().getString(Config.command).replace("@Player@", player.getName())
+					.replace("@Number@", (blockTotal) == 500 ? "over 500" : String.valueOf(blockTotal)).replace("@BlockName@", matName).replace("@LightLevel@", String.valueOf(lightLevel)).replace("@LightPercent@", formattedPercent + "%").trim();
+			if (command.startsWith("/")) command = command.replaceFirst("/", "");
+			if (!command.isEmpty())
+			fd.getServer().dispatchCommand(fd.getServer().getConsoleSender(), command);
+		}
 		for (Player x : fd.getServer().getOnlinePlayers()) {
 			if (fd.getPermissions().hasBroadcastPerm(x) && fd.getWorldHandler().isEnabledWorld(x) && !fd.getAdminMessageHandler().receivedAdminMessage(x)) {
 				x.sendMessage(formatted);
