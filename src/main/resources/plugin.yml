@@ -1,11 +1,11 @@
 name: FoundDiamonds
 version: 3.6.6
 main: co.proxa.founddiamonds.FoundDiamonds
-author: proxa
+author: Daleth
 api-version: 1.16
-website: http://dev.bukkit.org/server-mods/founddiamonds/
+website: https://www.spigotmc.org/resources/founddiamonds-updated.81124/
 description: Block announcer and anti x-ray
-dev-url: http://dev.bukkit.org/server-mods/founddiamonds/
+dev-url: https://github.com/WeNeedCoffee/FoundDiamonds
 
 commands:
    fd:
@@ -24,6 +24,8 @@ permissions:
       fd.broadcast: true
       fd.monitor: true
       fd.admin: true
+      fd.notify: true
+      fd.notify.self: true
 
   fd.manage.*:
     description: Allows management of all blocks
@@ -142,10 +144,18 @@ permissions:
     description: Allows a player to list trap blocks
     default: false
 
-  fd.broadcast:
-    description: Broadcasts to player
+  fd.notify:
+    description: Broadcasts others actions to player
     default: false
-
+    
+  fd.notify.self:
+    description: Broadcasts players action to self
+    default: false
+    
+  fd.broadcast:
+    description: Broadcasts from player
+    default: false
+    
   fd.monitor:
     description: Monitors the players light level
     default: false

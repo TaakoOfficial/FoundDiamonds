@@ -36,6 +36,9 @@ public class BroadcastHandler {
 	}
 
 	private void broadcastFoundBlock(final Player player, final Material mat, final int blockTotal, final int lightLevel) {
+		if (!fd.getPermissions().hasBroadcastPerm(player)) {
+			return;
+		}
 		String matName = Format.getFormattedName(mat, blockTotal);
 		ChatColor color = fd.getMapHandler().getBroadcastedBlocks().get(mat);
 		double lightPercent = ((double) lightLevel / 15) * 100;
@@ -75,7 +78,7 @@ public class BroadcastHandler {
 			fd.getServer().dispatchCommand(fd.getServer().getConsoleSender(), command);
 		}
 		for (Player x : fd.getServer().getOnlinePlayers()) {
-			if (fd.getPermissions().hasBroadcastPerm(x) && fd.getWorldHandler().isEnabledWorld(x) && !fd.getAdminMessageHandler().receivedAdminMessage(x)) {
+			if (fd.getPermissions().hasNotifyPerm(x) && fd.getWorldHandler().isEnabledWorld(x) && !fd.getAdminMessageHandler().receivedAdminMessage(x) && (x.getUniqueId().equals(player.getUniqueId()) ? fd.getPermissions().hasNotifySelfPerm(x) : true)) {
 				x.sendMessage(formatted);
 			}
 		}

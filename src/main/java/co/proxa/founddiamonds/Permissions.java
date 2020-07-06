@@ -30,7 +30,15 @@ public class Permissions {
     public boolean hasBroadcastPerm(CommandSender sender) {
         return hasPerm(sender, "fd.broadcast");
     }
+    
+    public boolean hasNotifyPerm(CommandSender sender) {
+        return hasPerm(sender, "fd.notify");
+    }
 
+    public boolean hasNotifySelfPerm(CommandSender sender) {
+        return hasPerm(sender, "fd.notify.self");
+    }
+    
     public boolean hasMonitorPerm(CommandSender sender) {
         return hasPerm(sender, "fd.monitor");
     }
