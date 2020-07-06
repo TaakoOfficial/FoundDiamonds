@@ -228,6 +228,8 @@ public class Format {
 			}
 		} else if (mat == Material.SANDSTONE) {
 			matName = "sandstone";
+		} else if (mat == Material.ANCIENT_DEBRIS) {
+			matName = material(mat);
 		} else {
 			matName = material(mat);
 			if (total > 1) {
