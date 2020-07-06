@@ -19,7 +19,7 @@ configurations {
     extraLibs
 }
 dependencies {
-    compile "org.bukkit:bukkit:1.15-R0.1-SNAPSHOT"
+    compile "org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT"
     //extraLibs group: 'coffee.weneed', name: 'utils', version: '1.0.0-SNAPSHOT'
     configurations.compile.extendsFrom(configurations.extraLibs)
 }
