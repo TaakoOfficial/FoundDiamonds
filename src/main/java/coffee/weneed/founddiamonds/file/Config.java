@@ -66,5 +66,12 @@ public class Config {
 	/*Metrics*/
 	public final static String metrics = "Found Diamonds Configuration.Metrics.Enabled";
 	public final static String debug = "Found Diamonds Configuration.Main.debug";
+	
+	/*Award Commands*/
+	public final static String commandForFindingDiamonds = "Found Diamonds Configuration.Awards.Commands.Run command for finding diamonds";
+	public final static String chanceToRunCommand = "Found Diamonds Configuration.Awards.Commands.Percent chance of running command";
+	public final static String possibleCommands = "Found Diamonds Configuration.Awards.Commands.Possible commands";
+	public final static String commandCount = "Found Diamonds Configuration.Awards.Commands.Number of commands to run";
+	
 
 }

@@ -43,13 +43,25 @@ Found Diamonds Configuration:
         - 'SATURATION'
         - 'SPEED'
         - 'WATER_BREATHING'
+    Commands:
+      Run command for finding diamonds: false
+      Percent chance of running command: 5
+      Number of commands to run: 1
+      Possible commands:
+        - 'none'
+        - 'none'
   Broadcasts:
     Broadcasted Blocks:
+      - gold ore,gold
+      - lapis ore,blue
+      - emerald ore,green
+      - ancient debris,white
+      - diamond ore,aqua
     Options:
       Message: "@Player@ found @Number@ @BlockName@"
       Use player nicknames: true
       Use classic ore colors for ores: true
-      Command:
+      Command: #'discordsrv broadcast :pick: **[Mining] The player @Player@ found @Number@ @BlockName@**.'
   Logging:
     Trap breaks: true
     Light Level Violations: false
