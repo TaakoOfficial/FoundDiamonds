@@ -176,6 +176,8 @@ public class MapHandler {
 		fd.getLog().info("Redstone Ore added");
 		broadcastedBlocks.put(Material.EMERALD_ORE, ChatColor.GREEN);
 		fd.getLog().info("Emerald Ore added");
+		broadcastedBlocks.put(Material.ANCIENT_DEBRIS, ChatColor.GREEN);
+		fd.getLog().info("Ancient Debris added");
 	}
 
 	private ChatColor parseColor(String co, Material mat) {
