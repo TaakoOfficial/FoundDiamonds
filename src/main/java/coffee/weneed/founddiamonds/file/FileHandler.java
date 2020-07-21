@@ -15,6 +15,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 import coffee.weneed.founddiamonds.FoundDiamonds;
+import coffee.weneed.founddiamonds.LLoc;
 import coffee.weneed.founddiamonds.Trap;
 
 public class FileHandler {
@@ -97,7 +98,7 @@ public class FileHandler {
 		cleanLog = new File(fd.getDataFolder(), "cleanlog.txt");
 	}
 
-	public void readBlocksFromFile(File file, Collection<Location> list) {
+	public void readBlocksFromFile(File file, Collection<LLoc> list) {
 		BufferedReader b = null;
 		try {
 			b = new BufferedReader(new FileReader(file));
@@ -106,7 +107,7 @@ public class FileHandler {
 				if (!strLine.startsWith("#")) {
 					try {
 						String[] fs = strLine.split(";");
-						Location lo = new Location(fd.getServer().getWorld(fs[0]), Double.parseDouble(fs[1]), Double.parseDouble(fs[2]), Double.parseDouble(fs[3]));
+						LLoc lo = new LLoc(new Location(fd.getServer().getWorld(fs[0]), Double.parseDouble(fs[1]), Double.parseDouble(fs[2]), Double.parseDouble(fs[3])));
 						list.add(lo);
 					} catch (Exception ex) {
 						fd.getLog().severe(MessageFormat.format("Invalid block in file.  Please delete {0}", file.getName()));
@@ -171,12 +172,12 @@ public class FileHandler {
 		}
 	}
 
-	public boolean writeBlocksToFile(File file, Collection<Location> blockList, String info) {
+	public boolean writeBlocksToFile(File file, Collection<LLoc> blockList, String info) {
 		if (blockList.size() > 0) {
 			if (fd.getDataFolder().exists()) {
 				PrintWriter out = null;
 				try {
-					if (!file.exists()) {
+					if (file == null || !file.exists()) {
 						boolean success = file.createNewFile();
 						if (!success) {
 							fd.getLog().severe(MessageFormat.format("[{0}] Couldn't create file to store blocks in", file.getName()));
@@ -186,9 +187,23 @@ public class FileHandler {
 						out = new PrintWriter(new BufferedWriter(new FileWriter(file, false)));
 						out.write("# " + info);
 						out.println();
-						for (Location m : blockList) {
-							out.write(m.getWorld().getName() + ";" + m.getX() + ";" + m.getY() + ";" + m.getZ());
+						for (LLoc m : blockList) {
+							try {
+							out.write(m.getWorldName() + ";" + m.getX() + ";" + m.getY() + ";" + m.getZ());
 							out.println();
+							} catch (NullPointerException e) {
+								System.out.println("Please send the following info to Dalethium's FoundDiamonds Github Repo: ");
+								if (m == null) {
+									System.out.println("m");
+								} else if (m.getWorld() == null) {
+									System.out.println("world");
+								} else if (m.getWorld().getName() == null) {
+									System.out.println("name");
+								} else {
+									System.out.println("???");
+								}
+								e.printStackTrace();
+							}
 						}
 					} catch (IOException ex) {
 						fd.getLog().severe(MessageFormat.format("Error writing blocks to {0}!", file.getName()));

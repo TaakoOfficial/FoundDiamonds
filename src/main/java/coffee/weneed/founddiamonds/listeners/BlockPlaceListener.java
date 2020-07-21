@@ -1,18 +1,20 @@
 package coffee.weneed.founddiamonds.listeners;
 
 import java.util.HashSet;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import coffee.weneed.founddiamonds.FoundDiamonds;
+import coffee.weneed.founddiamonds.LLoc;
 import coffee.weneed.founddiamonds.file.Config;
 
 public class BlockPlaceListener implements Listener {
 
-	private HashSet<Location> placed = new HashSet<>();
+
+
+	private HashSet<LLoc> placed = new HashSet<>();
 	private FoundDiamonds fd;
 
 	public BlockPlaceListener(FoundDiamonds fd) {
@@ -23,7 +25,7 @@ public class BlockPlaceListener implements Listener {
 		if (fd.getConfig().getBoolean(Config.mysqlEnabled)) {
 			fd.getMySQL().updatePlacedBlockinSQL(event.getBlock().getLocation());
 		} else {
-			placed.add(event.getBlock().getLocation());
+			placed.add(new LLoc(event.getBlock().getLocation()));
 		}
 	}
 
@@ -31,7 +33,7 @@ public class BlockPlaceListener implements Listener {
 		placed.clear();
 	}
 
-	public HashSet<Location> getFlatFilePlacedBlocks() {
+	public HashSet<LLoc> getFlatFilePlacedBlocks() {
 		return placed;
 	}
 
