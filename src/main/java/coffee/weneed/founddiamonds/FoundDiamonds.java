@@ -11,6 +11,7 @@ import coffee.weneed.founddiamonds.file.FileUtils;
 import coffee.weneed.founddiamonds.handlers.AdminMessageHandler;
 import coffee.weneed.founddiamonds.handlers.BroadcastHandler;
 import coffee.weneed.founddiamonds.handlers.CommandHandler;
+import coffee.weneed.founddiamonds.handlers.CommandRewardHandler;
 import coffee.weneed.founddiamonds.handlers.ItemHandler;
 import coffee.weneed.founddiamonds.handlers.LightLevelHandler;
 import coffee.weneed.founddiamonds.handlers.LoggingHandler;
@@ -68,6 +69,7 @@ public class FoundDiamonds extends JavaPlugin {
 	private final FileHandler fileHandler = new FileHandler(this);
 	private final PotionHandler potionHandler = new PotionHandler(this);
 	private final ItemHandler itemHandler = new ItemHandler(this);
+	private final CommandRewardHandler commandRewardHandler = new CommandRewardHandler(this);
 	private final MenuHandler menuHandler = new MenuHandler(this);
 	private final BlockCounter blockTotal = new BlockCounter(this);
 
@@ -122,6 +124,10 @@ public class FoundDiamonds extends JavaPlugin {
 
 	public ItemHandler getItemHandler() {
 		return itemHandler;
+	}
+	
+	public CommandRewardHandler getCommandRewardHandler() {
+		return commandRewardHandler;
 	}
 
 	public LightLevelHandler getLightLevelHandler() {

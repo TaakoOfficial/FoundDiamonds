@@ -46,10 +46,8 @@ Found Diamonds Configuration:
     Commands:
       Run command for finding diamonds: false
       Percent chance of running command: 5
-      Number of commands to run: 1
       Possible commands:
-        - 'none'
-        - 'none'
+        - 'say @Player@ found a diamond!'
   Broadcasts:
     Broadcasted Blocks:
       - gold ore,gold

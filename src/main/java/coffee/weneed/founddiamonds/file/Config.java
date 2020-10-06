@@ -71,7 +71,6 @@ public class Config {
 	public final static String commandForFindingDiamonds = "Found Diamonds Configuration.Awards.Commands.Run command for finding diamonds";
 	public final static String chanceToRunCommand = "Found Diamonds Configuration.Awards.Commands.Percent chance of running command";
 	public final static String possibleCommands = "Found Diamonds Configuration.Awards.Commands.Possible commands";
-	public final static String commandCount = "Found Diamonds Configuration.Awards.Commands.Number of commands to run";
 	
 
 }

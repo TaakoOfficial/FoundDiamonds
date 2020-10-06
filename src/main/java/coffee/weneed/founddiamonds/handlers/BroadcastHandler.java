@@ -85,6 +85,9 @@ public class BroadcastHandler {
 			if (fd.getConfig().getBoolean(Config.itemsForFindingDiamonds)) {
 				fd.getItemHandler().handleRandomItems(player);
 			}
+			if (fd.getConfig().getBoolean(Config.commandForFindingDiamonds)) {
+				fd.getItemHandler().handleRandomItems(player);
+			}
 		}
 	}
 }
