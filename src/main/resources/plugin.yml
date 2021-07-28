@@ -1,8 +1,8 @@
 name: FoundDiamonds
-version: 4.0.3
+version: 4.0.3-SNAPSHOT
 main: coffee.weneed.founddiamonds.FoundDiamonds
 author: Daleth
-api-version: 1.16
+api-version: 1.17
 website: https://www.spigotmc.org/resources/founddiamonds-updated.81124/
 description: Block announcer and anti x-ray
 dev-url: https://github.com/WeNeedCoffee/FoundDiamonds

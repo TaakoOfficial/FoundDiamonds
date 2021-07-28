@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>coffee.weneed</groupId>
 	<artifactId>FoundDiamonds</artifactId>
-	<version>4.0.3</version>
+	<version>4.0.3-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
@@ -31,14 +31,7 @@
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
-				<repository>
-			<id>daleths-repo</id>
-			<url>https://dalethium.com/jenkins/plugin/repository/everything</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
+
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
@@ -52,7 +45,7 @@
     <dependency>
            <groupId>org.spigotmc</groupId>
            <artifactId>spigot-api</artifactId>
-           <version>1.16.1-R0.1-SNAPSHOT</version>
+           <version>1.17-R0.1-SNAPSHOT</version>
            <scope>provided</scope>
     </dependency>
 		
