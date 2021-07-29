@@ -50,11 +50,26 @@ Found Diamonds Configuration:
         - 'say @Player@ found a diamond!'
   Broadcasts:
     Broadcasted Blocks:
+      - deepslate coal ore,black
+      - coal ore,black
+      - deepslate redstone ore,red
+      - redstone ore,red
+      - deepslate iron ore,gray
+      - iron ore,gray
+      - deepslate copper ore,green
+      - copper ore,green
+      - deepslate gold ore,gold
       - gold ore,gold
+      - gilded blackstone,gold
+      - nether gold ore,gold
+      - deepslate lapis ore,blue
       - lapis ore,blue
+      - deepslate emerald ore,green
       - emerald ore,green
       - ancient debris,white
+      - nether quartz ore,white
       - diamond ore,aqua
+      - deepslate diamond ore,aqua
     Options:
       Message: "@Player@ found @Number@ @BlockName@"
       Use player nicknames: true
