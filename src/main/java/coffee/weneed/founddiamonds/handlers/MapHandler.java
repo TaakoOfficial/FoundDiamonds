@@ -120,6 +120,7 @@ public class MapHandler {
 		if (fd.getConfig().getList(configLoc) == null) {
 			createList(map, configLoc);
 		} else {
+			map.clear();
 			List<String> thelist = fd.getConfig().getStringList(configLoc);
 			for (String x : thelist) {
 				String[] sp = x.split(",");
@@ -160,6 +161,7 @@ public class MapHandler {
 		}
 	}
 
+	//TODO remove this, default config should suffice and if not, it should be empty but not null.
 	private void loadDefaults() {
 		fd.getLog().info("Adding broadcast defaults...");
 		broadcastedBlocks.put(Material.DIAMOND_ORE, ChatColor.AQUA);
