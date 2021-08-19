@@ -7,3 +7,23 @@
 /.settings/
 /.git/
 
+/.idea/.name
+/.idea/compiler.xml
+/Found Diamonds.iml
+/.idea/artifacts/FoundDiamonds.xml
+/.idea/jarRepositories.xml
+/.idea/libraries/Maven__coffee_weneed_utils_1_0_0_SNAPSHOT.xml
+/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml
+/.idea/libraries/Maven__com_google_guava_guava_21_0.xml
+/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml
+/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_16_R0_4.xml
+/.idea/libraries/Maven__org_apache_commons_commons_compress_1_21.xml
+/.idea/libraries/Maven__org_json_json_20180813.xml
+/.idea/libraries/Maven__org_lz4_lz4_java_1_5_1.xml
+/.idea/libraries/Maven__org_spigotmc_spigot_api_1_17_R0_1_SNAPSHOT.xml
+/.idea/libraries/Maven__org_tukaani_xz_1_6.xml
+/.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/runConfigurations.xml
+/.idea/vcs.xml
