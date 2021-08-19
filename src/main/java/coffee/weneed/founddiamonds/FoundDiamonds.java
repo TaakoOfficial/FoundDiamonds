@@ -1,6 +1,7 @@
 package coffee.weneed.founddiamonds;
 
 import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
@@ -28,7 +29,6 @@ import coffee.weneed.founddiamonds.listeners.PlayerDamageListener;
 import coffee.weneed.founddiamonds.listeners.TrapListener;
 import coffee.weneed.founddiamonds.metrics.MetricsLite;
 import coffee.weneed.founddiamonds.sql.MySQL;
-
 /*
 Copyright 2011-2013 Blake Bartenbach
 
@@ -205,7 +205,7 @@ public class FoundDiamonds extends JavaPlugin {
 		pm.registerEvents(pistonListener, this);
 		pm.registerEvents(trapListener, this);
 		pm.registerEvents(lightLevelListener, this);
-		System.out.println(getConfig().getBoolean(Config.useBungeeCord) + " bungeecord");
+		this.getLogger().log(Level.ALL, getConfig().getBoolean(Config.useBungeeCord) + " bungeecord");
 		if (getConfig().getBoolean(Config.useBungeeCord)) {
 			getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 		}
