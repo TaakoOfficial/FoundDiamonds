@@ -6,7 +6,7 @@ import org.bukkit.World;
 public class LLoc extends Location {
 	private String worldName;
 
-	public LLoc(String worldname, World world, double x, double y, double z) {
+	public LLoc(String worldName, World world, double x, double y, double z) {
 		super(world, x, y, z);
 		setWorldName(worldName);
 	}
