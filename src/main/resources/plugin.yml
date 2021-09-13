@@ -23,7 +23,6 @@ permissions:
       fd.manage.*: true
       fd.broadcast: true
       fd.monitor: true
-      fd.admin: true
       fd.notify: true
       fd.notify.self: true
 
