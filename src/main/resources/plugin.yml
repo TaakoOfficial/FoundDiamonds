@@ -1,5 +1,5 @@
 name: FoundDiamonds
-version: 4.0.5-SNAPSHOT
+version: 4.0.6-SNAPSHOT
 main: coffee.weneed.founddiamonds.FoundDiamonds
 author: Daleth
 api-version: 1.17
