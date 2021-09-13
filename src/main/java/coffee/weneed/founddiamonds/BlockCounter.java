@@ -6,6 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import coffee.weneed.founddiamonds.LLoc;
 import coffee.weneed.founddiamonds.file.Config;
 import coffee.weneed.founddiamonds.util.PluginUtils;
 
@@ -68,7 +69,7 @@ public class BlockCounter {
 		if (fd.getConfig().getBoolean(Config.mysqlEnabled))
 			return !fd.getMySQL().blockWasPlaced(loc) && !wasCounted(loc);
 		else
-			return !wasCounted(loc) && !fd.getBlockPlaceListener().getFlatFilePlacedBlocks().contains(loc);
+			return !wasCounted(loc) && !fd.getBlockPlaceListener().getFlatFilePlacedBlocks().contains(new LLoc(loc));
 	}
 
 	public void removeAnnouncedOrPlacedBlock(final Location loc) {
