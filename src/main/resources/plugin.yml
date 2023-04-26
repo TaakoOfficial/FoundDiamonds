@@ -11,7 +11,7 @@ commands:
    fd:
      description: Shows the main menu
      aliases: [founddiamonds]
-     permission-message: Sorry, you do not have permission
+     permission-message: Sorry, you do not have permission test
 
 permissions:
   fd.*:
